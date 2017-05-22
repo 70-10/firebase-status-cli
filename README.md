@@ -1,9 +1,12 @@
 # firebase-status-cli
 
+Checking Firebase services status.
+https://status.firebase.google.com/
+
 ## Install
 
 ```
-$ npm install -g firebase-status-cli
+$ npm install -g firebase-status
 ```
 
 ## Usage
