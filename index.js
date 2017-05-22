@@ -14,7 +14,7 @@ const incidentURLs = Array.from(
 );
 
 if (incidentURLs.length <= 0) {
-  console.log("Incidens is none.");
+  console.log("Incident is none.");
   process.exit(0);
 }
 
