@@ -18,10 +18,19 @@ if (incidentURLs.length <= 0) {
   process.exit(0);
 }
 
+const services = {};
 incidentURLs.forEach(i => {
   const serviceName = decodeURI(i.match(/.*\/incident\/(.*)\/\d*$/)[1]);
+  if (Object.keys(services).includes(serviceName)) {
+    services[serviceName].push(i);
+  } else {
+    services[serviceName] = [i];
+  }
+});
+
+Object.keys(services).forEach(serviceName => {
   console.log(chalk.bold.underline.red(serviceName));
-  console.log(i);
+  services[serviceName].forEach(i => console.log(i));
   console.log();
 });
 
