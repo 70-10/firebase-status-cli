@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const client = require("cheerio-httpcli");
 const firebaseURL = "https://status.firebase.google.com";
 
