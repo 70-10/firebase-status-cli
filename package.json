@@ -20,15 +20,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.17.1",
-    "chalk": "^2.3.0",
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2"
   },
   "devDependencies": {
-    "eslint": "^4.13.1",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-prettier": "^2.3.1",
-    "prettier": "^1.9.2"
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.13.5"
   }
 }
