@@ -10,16 +10,21 @@ module.exports = () => {
         return firebaseURL + $(this).attr("href");
       })
     );
-    const services = {};
-    incidentURLs.forEach(i => {
-      const serviceName = decodeURI(i.match(/.*\/incident\/(.*)\/\d*$/)[1]);
-      if (Object.keys(services).includes(serviceName)) {
-        services[serviceName].push(i);
-      } else {
-        services[serviceName] = [i];
-      }
-    });
 
-    return services;
+    return format(incidentURLs);
   });
 };
+
+function format(list) {
+  return list.reduce((obj, url) => {
+    const serviceName = decodeURI(url.match(/.*\/incident\/(.*)\/\d*$/)[1]);
+    if (!Object.keys(obj).includes(serviceName)) {
+      obj[serviceName] = [];
+    }
+
+    obj[serviceName].push(url);
+    return obj;
+  }, {});
+}
+
+module.exports.format = format;
