@@ -6,9 +6,7 @@ module.exports = co.wrap(function*() {
   const browser = yield puppeteer.launch();
   const page = yield browser.newPage();
   yield page.goto(firebaseURL);
-  const incidentURLs = yield page.$$eval("table.timeline-table a", list =>
-    list.map(data => data.href)
-  );
+  const incidentURLs = yield page.$$eval("table.timeline-table a", list => list.map(data => data.href));
   yield browser.close();
 
   return format(incidentURLs);

@@ -12,9 +12,7 @@ test("format", t => {
   ];
 
   t.deepEqual(format(list), {
-    Crashlytics: [
-      "https://status.firebase.google.com/incident/Crashlytics/18015",
-    ],
+    Crashlytics: ["https://status.firebase.google.com/incident/Crashlytics/18015"],
     Hosting: [
       "https://status.firebase.google.com/incident/Hosting/18016",
       "https://status.firebase.google.com/incident/Hosting/18017",
