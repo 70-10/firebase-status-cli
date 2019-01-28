@@ -1,7 +1,6 @@
-import test from "ava";
-import { format } from ".";
+const { format } = require("./index");
 
-test("format", t => {
+test("format", () => {
   const list = [
     "https://status.firebase.google.com/incident/Crashlytics/18015",
     "https://status.firebase.google.com/incident/Hosting/18016",
@@ -11,7 +10,7 @@ test("format", t => {
     "https://status.firebase.google.com/incident/Realtime%20Database/18056",
   ];
 
-  t.deepEqual(format(list), {
+  expect(format(list)).toEqual({
     Crashlytics: ["https://status.firebase.google.com/incident/Crashlytics/18015"],
     Hosting: [
       "https://status.firebase.google.com/incident/Hosting/18016",

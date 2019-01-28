@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "prettier-eslint --write \"./*.js\"",
-    "test": "ava test.js"
+    "test": "jest"
   },
   "repository": "70-10/firebase-status-cli",
   "keywords": [],
@@ -26,9 +26,9 @@
     "puppeteer": "^1.8.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
     "eslint": "^5.6.0",
     "eslint-plugin-node": "^7.0.1",
+    "jest": "^24.0.0",
     "prettier": "^1.14.3",
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1"
